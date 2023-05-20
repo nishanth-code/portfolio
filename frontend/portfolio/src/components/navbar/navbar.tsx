@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
 import { HiMenuAlt4,HiX} from 'react-icons/hi';
-import {motion} from 'framer-motions';
+import {motion} from 'framer-motion';
 import './navbar.scss'
 import { images }  from '../../constants/index';
 
 const Navbar:React.FC = () =>{
-    const [Toggle,setToggle]=useState(false);
+    const [toggle,setToggle]=useState(false);
     return(
        <nav className="app__navbar">
            <div className="app__navbar-logo">
@@ -24,11 +24,21 @@ const Navbar:React.FC = () =>{
             </ul>
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={()=> setToggle(true)} />
-                {
-                Toggle && (
-                    <motion.div>
+                {toggle && (
+                    <motion.div
                         WhileInView={{x:[300,0]}}
-                        Transition={}
+                        Transition={{duration:0.95,ease:'easeout'}}
+                        >
+                            <HiX onClick={()=> setToggle(false)} />
+                            <ul className="app__navbar-links">
+                            {['Home','About','Contact','Work','skills'].map((item:String|Null)=>(
+                                   <li className="app__flex p-text" key={item} >
+                                  <a href={`#${item}`} onClick={()=> setToggle(false)}>{item}</a>
+                                     </li>
+                           
+            
+                            ))}
+                             </ul>
                     </motion.div>
                 )}
             </div>
