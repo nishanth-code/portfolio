@@ -1,7 +1,8 @@
 
 import './App.scss'
-import About from './components/about.tsx'
+import About from './components/about/about.tsx'
 import Navbar from './components/navbar/navbar.tsx'
+import Header from './components/header/header.tsx'
 
 function App() {
   
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="app">
        <Navbar />
-       
+       <Header />
       <About />
   </div>
   );
