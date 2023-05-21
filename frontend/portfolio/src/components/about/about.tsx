@@ -7,7 +7,9 @@ const About:React.FC = ()=>{
      const abouts = [
             {title:'Web Development',descreption:'iam a fullStack web developer .',imgUrl:images.about01},
              {title:'Iot',descreption:'I build on raspberry pi ,python .',imgUrl:images.about02},
-             {title:'Web3',descreption:'I am a web 3 enthusiast making my space into web3 decentralized system.',imgUrl:images.about03}
+             {title:'Web3',descreption:'I am a web 3 enthusiast making my space into web3 decentralized system.',imgUrl:images.about03},
+             {title:'cybersecurity',descreption:'my journey started with the field of cyber security end of the it is the main concern of all application.',imgUrl:images.about04},
+             
              
         ]
     return(
