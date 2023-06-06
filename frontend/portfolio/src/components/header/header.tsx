@@ -1,6 +1,7 @@
 import React from 'react';
 import { images }  from '../../constants/index';
 import {motion} from 'framer-motion';
+import Wrap from '../../wrapper/wrap'
 import './header.scss'
 
 
@@ -17,7 +18,7 @@ const Header:React.FC = ()=>{
     }
     return(
   
-        <div id="home" className="app__header app_flex">
+        <div  className="app__header app_flex">
             <motion.div
             whileInView={{x:[-100,0],opacity:[0,1]}}
             transition={{duration:0.5}}
@@ -70,4 +71,4 @@ const Header:React.FC = ()=>{
         
     );
 };
-export default Header;
+export default Wrap(Header,'home');

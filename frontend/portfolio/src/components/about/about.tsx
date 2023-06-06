@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { motion } from 'framer-motion';
 import './about.scss';
 import { images }  from '../../constants/index';
+import Wrap from '../../wrapper/wrap'
 
 const About:React.FC = ()=>{
      const abouts = [
@@ -40,4 +41,4 @@ const About:React.FC = ()=>{
         </>
     );
 };
-export default About;
+export default Wrap(About,'about');

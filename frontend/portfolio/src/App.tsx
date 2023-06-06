@@ -3,6 +3,7 @@ import './App.scss'
 import About from './components/about/about.tsx'
 import Navbar from './components/navbar/navbar.tsx'
 import Header from './components/header/header.tsx'
+import SocialMedia from './components/socialmedia.tsx'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
        <Navbar />
        <Header />
       <About />
+    
   </div>
   );
 };
