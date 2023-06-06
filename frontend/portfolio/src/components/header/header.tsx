@@ -71,4 +71,4 @@ const Header:React.FC = ()=>{
         
     );
 };
-export default Wrap(Header,'home');
+export default Wrap(Header,'Home');

@@ -41,4 +41,4 @@ const About:React.FC = ()=>{
         </>
     );
 };
-export default Wrap(About,'about');
+export default Wrap(About,'About');
