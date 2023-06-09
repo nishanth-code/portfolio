@@ -4,7 +4,7 @@ import './work.scss'
 import {AiFillEye,AiFillGithub} from 'react-icons/ai'
 import Wrap from '../../wrapper/wrap'
 
-const Work  :React.FC = () =>{
+const Work:React.FC = () =>{
     const handelWork =(item) =>{
         
     }
@@ -36,11 +36,43 @@ const Work  :React.FC = () =>{
            transition={{duration:0.5,delayChildren:0.5}}
            className="app__portfolio "
         >
-            {filterWorks.map((item,index)=>(
+            {/* {filterWorks.map((item,index)=>(
                 <div className="app__work-item app__flex " key={index}>
-                    <div>
+                    <div className="app__work-img app__flex">
+                        <img src={"ccczzc"}alt={"labsun"} />
+                        <motion.div
+                         whileHover={{opacity:[0,1]}}
+                         transition={{ease:'easeInOut',staggerChildren:0.5,duration:0.25}}
+                         className="app__hover app__flex"
+                         
+                        >
+                            <a href={"gdsgs"} >
+                                 <motion.div
+                                 whileInView={{opacity:[0,1]}}
+                                      whileHover={{opacity:[1,0.9]}}
+                                      transition={{duration:0.25}}
+                                      className="app__flex"
+                         
+                                  >
+                                      <AiFillEye />
+                                      </motion.div>
+                            </a>
+                            <a href={"jiojiji"} >
+                                 <motion.div
+                                 whileInView={{opacity:[0,1]}}
+                                      whileHover={{opacity:[1,0.9]}}
+                                      transition={{duration:0.25}}
+                                      className="app__flex"
+                         
+                                  >
+                                      <AiFillGithub />
+                                      </motion.div>
+                            </a>
+                        </motion.div>
+                        
                     </div>
-            ))}
+                    </div>
+            ))} */}
             </motion.div>
         </>
     )
