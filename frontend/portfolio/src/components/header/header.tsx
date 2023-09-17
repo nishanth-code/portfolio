@@ -3,6 +3,7 @@ import { images }  from '../../constants/index';
 import {motion} from 'framer-motion';
 import Wrap from '../../wrapper/wrap'
 import './header.scss'
+import MotionWrap from '../../wrapper/motionWraper'
 
 
 const Header:React.FC = ()=>{

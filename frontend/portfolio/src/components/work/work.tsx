@@ -4,6 +4,7 @@ import { images }  from '../../constants/index';
 import './work.scss'
 import {AiFillEye,AiFillGithub} from 'react-icons/ai'
 import Wrap from '../../wrapper/wrap'
+import MotionWrap from '../../wrapper/motionWraper'
 
 const Work:React.FC = () =>{
     // const handleWork = (item) => {
@@ -108,4 +109,4 @@ const Work:React.FC = () =>{
     
 }
 
-export default Wrap(Work,'Work')
+export default Wrap(MotionWrap(Work,'app__works'),'Work','app__primarybg');
