@@ -1,10 +1,12 @@
-import React from 'react'
 
+type localparam ={
+    active:string
+}
 
-const NavigationDots:React.FC = ({active})=>{
+const NavigationDots= ({active}:localparam)=>{
     return(
     <div className="app__navigation">
-        {['Home','About','Contact','Work','testimonials','skills'].map((item:String|Null,index)=>(
+        {['Home','About','Contact','Work','testimonials','skills'].map((item,index)=>(
                 
                 
                 <a 

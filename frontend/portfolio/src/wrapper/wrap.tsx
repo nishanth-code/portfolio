@@ -2,7 +2,12 @@ import React from 'react'
 import NavigationDots  from '../components/navigation.tsx'
 import SocialMedia from'../components/socialmedia.tsx'
 
-const Wrap: React.FC = (Component, idName, classNames) => {
+// interface WrapProps {
+//   Component: React.FC;
+//   idName: string;
+//   classNames?: string;
+// }
+const Wrap: React.FC= (Component:React.FC, idName, classNames) => {
   const HOC: React.FC = () => (
     <div id={ idName } className={`app__container ${classNames}`}>
       <SocialMedia />

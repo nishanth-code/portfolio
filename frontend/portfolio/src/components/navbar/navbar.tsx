@@ -5,7 +5,7 @@ import './navbar.scss'
 import { images }  from '../../constants/index';
 
 const Navbar:React.FC = () =>{
-    const [toggle,setToggle]=useState(false);
+    const [toggle,setToggle]=useState<boolean>(false);
     return(
        <nav className="app__navbar">
            <div className="app__navbar-logo">
@@ -13,7 +13,7 @@ const Navbar:React.FC = () =>{
                <img src={images.logo} alt="logo" />
             </div>
             <ul className="app__navbar-links">
-            {['Home','About','Contact','Work','skills'].map((item:String|Null)=>(
+            {['Home','About','Contact','Work','skills'].map((item:String|null)=>(
                 <li className="app__flex p-text" key={`link-${item}`} >
                 <div />
                 <a href={`#${item}`}>{item}</a>
@@ -31,8 +31,8 @@ const Navbar:React.FC = () =>{
                         >
                             <HiX onClick={()=> setToggle(false)} />
                             <ul className="app__navbar-links">
-                            {['Home','About','Contact','Work','skills'].map((item:String|Null)=>(
-                                   <li className="app__flex p-text" key={item} >
+                            {['Home','About','Contact','Work','skills'].map((item:String)=>(
+                                   <li className="app__flex p-text" key={item.toString()} >
                                   <a href={`#${item}`} onClick={()=> setToggle(false)}>{item}</a>
                                      </li>
                            
