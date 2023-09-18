@@ -6,7 +6,7 @@ type localparam ={
 const NavigationDots= ({active}:localparam)=>{
     return(
     <div className="app__navigation">
-        {['Home','About','Contact','Work','testimonials','skills'].map((item,index)=>(
+        {['Home','About','Work','skills','testimonials','Contact'].map((item,index)=>(
                 
                 
                 <a 

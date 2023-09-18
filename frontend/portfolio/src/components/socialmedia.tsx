@@ -5,7 +5,7 @@ const SocialMedia:React.FC = ()=>{
     return(
     <div className='app__social'>
         <div>
-            <BsTwitter />
+            <BsTwitter/>
         </div>
           <div>
             <BsLinkedin />
