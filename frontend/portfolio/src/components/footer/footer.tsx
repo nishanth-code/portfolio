@@ -3,8 +3,8 @@ import MotionWrap from '../../wrapper/motionWraper'
 import Wrap from '../../wrapper/wrap'
 import { images } from '../../constants/index'
 import React,{ useState } from 'react'
-import { AiOutlineLoading } from 'react-icons/ai'
-interface formData{
+
+type formData={
     name:string,
     email:string,
     message:String
@@ -13,14 +13,21 @@ type submited={
     submit:boolean
 }
 
-const Footer = () =>{
+const Footer:React.FC = () =>{
     const [formdata,setformdata]=useState<formData>({name:'',email:'',message:''})
     const [formsubmit,setFormsubmit]=useState<submited['submit']>(false)
     const [loading,setloading]=useState<submited['submit']>(false)
     
-    const handleSubmit = ():void=>{
-        
+    const handleSubmit = (data):void=>{
+        const name:formData['name']=data.target.form[0].value
+       const email:formData['email']=data.target.form[1].value
+       const message:formData['message']=data.target.form[2].value
+        setformdata({name,email,message})
+        setFormsubmit(!formsubmit)
         setloading(!loading)
+        console.log(formdata)
+        
+        
 
     }
     const handleChange = (e):void =>{
@@ -40,6 +47,7 @@ const Footer = () =>{
                 <a href="tel:+918431880148">+918431880148</a>
             </div>
         </div>
+        <form action="" method="post" onSubmit={handleSubmit}>
         <div className="app__footer-form app__flex">
             <div className="app__flex">
                 <input type="text" name="form['name']" placeholder='your name'className='p-text' onChange={handleChange} />
@@ -56,8 +64,9 @@ const Footer = () =>{
 
                 
             </div>
-            <button type="button" className='p-text' onClick={handleSubmit}>{loading?'sending':'send'}</button>
+            <button type="button" className='p-text' onClick={handleSubmit} >{loading?'sending':'send'}</button>
         </div>
+        </form>
         </>
     )
 }
