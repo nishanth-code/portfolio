@@ -16,7 +16,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-social-icons": "^5.15.0",
-    "sass": "^1.62.1"
+    "react-tooltip": "^5.21.4",
+    "sass": "^1.62.1",
+    "vite": "^4.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
