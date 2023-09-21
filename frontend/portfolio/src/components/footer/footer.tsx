@@ -18,7 +18,7 @@ const Footer:React.FC = () =>{
     const [formsubmit,setFormsubmit]=useState<submited['submit']>(false)
     const [loading,setloading]=useState<submited['submit']>(false)
     
-    const handleSubmit = (data):void=>{
+    const handleSubmit = (data:any):void=>{
         const name:formData['name']=data.target.form[0].value
        const email:formData['email']=data.target.form[1].value
        const message:formData['message']=data.target.form[2].value
@@ -30,7 +30,7 @@ const Footer:React.FC = () =>{
         
 
     }
-    const handleChange = (e):void =>{
+    const handleChange = (e:any):void =>{
         console.log(e.target.value)
            
     }

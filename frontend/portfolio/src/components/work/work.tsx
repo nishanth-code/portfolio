@@ -21,11 +21,12 @@ const Work:React.FC = () =>{
     //       }
     //     }, 500);
     //   };
+    const filterWork=[{title:'scholar connect',codeLink:'https://github.com/nishanth-code/profFolio.git',link:'https://scholarconnect.vercel.app/',tag:'web devleopment',description:'scholarconnect is a full MERN stack web application.it is a R&D portal for all the researchers and professors to showcase their work to the community '}]
     
     const [activeFilter,SetactiveFilter] = useState('all')
     const [animateCard,SetAnimateCard] = useState({y:0,opacity:1})
-    const [works,setWorks] = useState([])
-    const [filterWorks,setFilterWorks] = useState()
+    // const [works,setWorks] = useState([])
+    // const [filterWorks,setFilterWorks] = useState()
     return(
         <>
             <h2 className="head-text">
@@ -37,7 +38,7 @@ const Work:React.FC = () =>{
             {['web Devlopment','Web3','IOT','all'].map((item,index)=>(
                 <div
                   key={index}
-                  onClick={() => handelWork(item)}
+                //   onClick={() => handelWork(item)}
                   className={` app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active':''}`}
                 >
                     {item}
@@ -51,7 +52,7 @@ const Work:React.FC = () =>{
            transition={{duration:0.5,delayChildren:0.5}}
            className="app__work-portfolio "
         >
-             {/* {filterWork.map((work, index) => ( */}
+             {filterWork.map((work, index) => (
                  <div className="app__work-item app__flex " >
                     <div className="app__work-img app__flex">
                         <img src={images.about03}alt={"labsun"} />{/* back*/}
@@ -61,7 +62,7 @@ const Work:React.FC = () =>{
                          className="app__work-hover app__flex"
                          
                         >
-                            <a href={"gdsgs"} >{/* back*/}
+                            <a href={work.link} target='blank' >{/* back*/}
                                  <motion.div
                                  whileInView={{opacity:[0,1]}}
                                       whileHover={{opacity:[1,0.9]}}
@@ -72,7 +73,7 @@ const Work:React.FC = () =>{
                                       <AiFillEye />
                                       </motion.div>
                             </a>
-                            <a href={"jiojiji"} >{/* back*/}
+                            <a href={work.codeLink} target='blank' >{/* back*/}
                                  <motion.div
                                  whileInView={{opacity:[0,1]}}
                                       whileHover={{opacity:[1,0.9]}}
@@ -87,11 +88,11 @@ const Work:React.FC = () =>{
                         
                     </div>
                     <div className='app__work-content app__flex'>
-                        {/* back*/}<h4 className='bold-text'>sample text</h4> 
-                        {/* back*/}<p className='p-text' style={{marginTop:10}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo commodi voluptas nam ab animi reiciendis expedita eum earum nulla alias porro odio, cum ratione consequatur dolorum numquam. Esse, impedit sapiente.</p>
+                        {/* back*/}<h4 className='bold-text'>{work.title}</h4> 
+                        {/* back*/}<p className='p-text' style={{marginTop:10}}>{work.description}</p>
                          <div className="app__work-tag app__flex">
 
-                           {/* back*/} <p className="p_text">testing</p>
+                           {/* back*/} <p className="p_text">{work.tag}</p>
                          </div>
 
 
@@ -102,7 +103,7 @@ const Work:React.FC = () =>{
                     
            
             
-        {/* ))} */}
+         ))} 
         </motion.div> 
         </>
     )
