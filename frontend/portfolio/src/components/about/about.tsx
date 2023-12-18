@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './about.scss';
 import { images }  from '../../constants/index';
 import Wrap from '../../wrapper/wrap'
+import MotionWrap from '../../wrapper/motionWraper'
 
 const About:React.FC = ()=>{
      const abouts = [
@@ -41,4 +42,4 @@ const About:React.FC = ()=>{
         </>
     );
 };
-export default Wrap(About,'about');
+export default Wrap(MotionWrap(About,'app__about'),'About','app__whitebg');
