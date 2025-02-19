@@ -7,7 +7,7 @@ import SocialMedia from'../components/socialmedia.tsx'
 //   idName: string;
 //   classNames?: string;
 // }
-const Wrap= (Component, idName, classNames) => {
+const Wrap= (Component:any, idName:any, classNames:any) => {
   const HOC: React.FC = () => (
     <div id={ idName } className={`app__container ${classNames}`}>
       <SocialMedia />

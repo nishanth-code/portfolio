@@ -72,4 +72,4 @@ const Header:React.FC = ()=>{
         
     );
 };
-export default Wrap(Header,'Home');
+export default Wrap(MotionWrap(Header,'Home'),'home','');

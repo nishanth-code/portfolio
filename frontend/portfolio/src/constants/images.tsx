@@ -18,6 +18,9 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import go from '../assets/go.png';
+import nestjs from '../assets/nestjs.png'
+import docker from '../assets/docker.png'
 
 import about01 from '../assets/about01.jpg';
 import about02 from '../assets/about02.jpg';
@@ -49,6 +52,9 @@ export default {
   html,
   javascript,
   mu5,
+  go,
+  nestjs,
+  docker,
   node,
   vite,
   python,
