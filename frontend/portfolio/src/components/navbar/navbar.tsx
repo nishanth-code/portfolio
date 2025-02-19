@@ -26,7 +26,7 @@ const Navbar:React.FC = () =>{
                 <HiMenuAlt4 onClick={()=> setToggle(true)} />
                 {toggle && (
                     <motion.div
-                        WhileInView={{x:[300,0]}}
+                        whileInView={{x:[300,0]}}
                         Transition={{duration:0.95,ease:'easeout'}}
                         >
                             <HiX onClick={()=> setToggle(false)} />

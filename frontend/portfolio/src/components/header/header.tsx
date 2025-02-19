@@ -57,7 +57,7 @@ const Header:React.FC = ()=>{
                 
             </motion.div>
             <motion.div
-            varient={scaleVarients}
+            variants={scaleVarients}
             whileInView={scaleVarients.whileInView}
             className="app__header-circles"
             >
