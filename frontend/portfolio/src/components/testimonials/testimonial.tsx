@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {motion} from 'framer-motion'
 import { HiChevronLeft,HiChevronRight } from 'react-icons/hi'
 import MotionWrap from '../../wrapper/motionWraper'

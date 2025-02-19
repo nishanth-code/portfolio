@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import './skill.scss'
 import { motion } from 'framer-motion'
 import Wrap from '../../wrapper/wrap'
@@ -8,8 +8,8 @@ import MotionWrap from '../../wrapper/motionWraper'
 
 
 const Skill =()=>{
-    const [experience,Setexperience] = useState([])
-    const [skill,Setskill] = useState([])
+    // const [experience,Setexperience] = useState([])
+    // const [skill,Setskill] = useState([])
     const skills =[{ imgurl:images.node,name:"Node.js"},
         { imgurl:images.react,name:"React"},
         { imgurl:images.git,name:"git"},
@@ -80,7 +80,7 @@ return(
                 </motion.div>
                 <ReactTooltip
                 id={skil.name}
-                effect="solid"
+                // effect="solid"
                 arrowColor="#fff"
                 className='skills-tooltip'
                 

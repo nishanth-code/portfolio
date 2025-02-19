@@ -23,8 +23,8 @@ const Work:React.FC = () =>{
     //   };
     const filterWork=[{title:'scholar connect',codeLink:'https://github.com/nishanth-code/profFolio.git',link:'https://scholarconnect.vercel.app/',tag:'web devleopment',description:'scholarconnect is a full MERN stack web application.it is a R&D portal for all the researchers and professors to showcase their work to the community '}]
     
-    const [activeFilter,SetactiveFilter] = useState('all')
-    const [animateCard,SetAnimateCard] = useState({y:0,opacity:1})
+    const [activeFilter,_] = useState('all')
+    const [animateCard,__] = useState({y:0,opacity:1})
     // const [works,setWorks] = useState([])
     // const [filterWorks,setFilterWorks] = useState()
     return(
@@ -52,7 +52,7 @@ const Work:React.FC = () =>{
            transition={{duration:0.5,delayChildren:0.5}}
            className="app__work-portfolio "
         >
-             {filterWork.map((work, index) => (
+             {filterWork.map((work) => (
                  <div className="app__work-item app__flex " >
                     <div className="app__work-img app__flex">
                         <img src={images.about03}alt={"labsun"} />{/* back*/}
