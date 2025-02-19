@@ -27,7 +27,7 @@ const Navbar:React.FC = () =>{
                 {toggle && (
                     <motion.div
                         whileInView={{x:[300,0]}}
-                        Transition={{duration:0.95,ease:'easeout'}}
+                        transition={{duration:0.95,ease:'easeout'}}
                         >
                             <HiX onClick={()=> setToggle(false)} />
                             <ul className="app__navbar-links">
